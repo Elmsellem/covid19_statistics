@@ -6,7 +6,7 @@ let angles = {x: -20, y: 40, z: 0};
 let colorWater = '#1f2026';
 let colorGraticule = '#525254';
 let colorLand = '#ee3a4b';
-let colorCountry = '#c23140';
+let colorCountry = '#8b0003';
 let colorCountriesBorder = colorCountry;
 
 let canvas = d3.select('#globe');
@@ -104,7 +104,7 @@ function scale() {
     height = document.getElementById('canvas_parent').offsetHeight;
     canvas.attr('width', width).attr('height', height);
     projection
-        .scale((scaleFactor * Math.min(width, height)) / 2 + 150)
+        .scale((scaleFactor * Math.min(width, height)) / 2 + 100)
         .translate([width / 2, height / 2]);
     render()
 }
