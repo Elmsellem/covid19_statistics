@@ -104,7 +104,7 @@ function scale() {
     height = document.getElementById('canvas_parent').offsetHeight;
     canvas.attr('width', width).attr('height', height);
     projection
-        .scale((scaleFactor * Math.min(width, height)) / 2)
+        .scale((scaleFactor * Math.min(width, height)) / 2 + 150)
         .translate([width / 2, height / 2]);
     render()
 }
