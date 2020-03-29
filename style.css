@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+.page {
+    background: rgb(255,0,31);
+    background: radial-gradient(circle, rgba(255,0,31,1) 0%, rgba(55,4,4,1) 100%);
+}
+
+#country_loader {
+    z-index: 9;
+    background: #d4d4d44f;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+#globe {
+    cursor: move;
+}
+
+.country {
+    fill: #b8b8b8;
+    stroke: #fff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+}

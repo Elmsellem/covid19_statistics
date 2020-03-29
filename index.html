@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="h-100 page">
+    <div class="position-absolute w-100">
+        <div class="bg-dark text-white shadow pb-2 position-relative container-fluid">
+            <div class="d-flex align-items-center position-absolute" id="country_loader">
+                <div class="w-100 text-center">
+                    <div class="spinner-grow text-dark" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                    <div>
+                        <span class="bg-dark">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4 id="country_name" class="text-truncate">Click to country to get details.</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-warning w-100">
+                        <span class="d-block">Total:</span>
+                        <span id="cv_total" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-warning w-100">
+                        <span class="d-block">Active:</span>
+                        <span id="cv_active" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-danger w-100">
+                        <span class="d-block">Critical:</span>
+                        <span id="cv_critical" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-danger w-100">
+                        <span class="d-block">Deaths:</span>
+                        <span id="cv_deaths" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-success w-100">
+                        <span class="d-block">Recovered:</span>
+                        <span id="cv_recovered" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-warning w-100">
+                        <span class="d-block">Today:</span>
+                        <span id="cv_today" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+
+                <div class="col-3 col-md-auto">
+                    <span class="badge badge-danger w-100">
+                        <span class="d-block">Today deaths:</span>
+                        <span id="cv_today_deaths" class="font-weight-bold">---</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-100" id="canvas_parent">
+        <canvas id="globe"></canvas>
+    </div>
+    <div class="position-absolute w-100" style="bottom: 0;">
+        <div class="bg-dark text-white shadow container-fluid position-relative">
+            <div class="bg-dark position-absolute px-2" style="top: -24px; left: 0; border-radius: 0 5px 0 0">
+                <span>All World</span>
+            </div>
+            <!--<h3>All world</h3>-->
+            <div class="row">
+                <div class="col-3">
+                    <div class="text-warning">
+                        <strong>Total:</strong>
+                        <strong id="cv_tt_total" class="d-block d-md-inline-block">---</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="text-warning">
+                        <strong>Active:</strong>
+                        <strong id="cv_tt_active" class="d-block d-md-inline-block">---</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="text-danger">
+                        <strong>Deaths:</strong>
+                        <strong id="cv_tt_deaths" class="d-block d-md-inline-block">---</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="text-success">
+                        <strong>Recovered:</strong>
+                        <strong id="cv_tt_recovered" class="d-block d-md-inline-block">---</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark text-white text-center"><small>Covid19 statistics Created by Mohammed Elmsellem</small></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+
+<script src="https://bl.ocks.org/mbostock/raw/7ea1dde508cec6d2d95306f92642bc42/6aac691494f752142a67cc43c51a0fd09896dbd4/versor.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/numeraljs@1.5.6/numeral.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>
